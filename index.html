@@ -4,91 +4,389 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>宜昌唐恩科技咨询有限公司 | Yichang Tang En Technology Consulting Co., Ltd.</title>
-<meta name="description" content="宜昌唐恩科技咨询有限公司 — 以软件工程与多智能体架构，为企业交付可运行的智能。">
+<meta name="description" content="宜昌唐恩科技咨询有限公司 — 专注企业软件开发、AI智能体系统、影视内容创作与数字化转型咨询。位于湖北自贸区宜昌片区清华科技园。">
+<meta name="keywords" content="宜昌唐恩科技,软件开发,AI智能体,数字化咨询,企业信息化,移动应用开发,人工智能">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --bg: #050507;
-    --panel: #0c0c12;
-    --cyan: #22d3ee;
-    --mag: #ff2d95;
-    --text: #e6e6ee;
-    --muted: #7a7a8c;
-    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-  }
-  body {
-    font-family: -apple-system, "PingFang SC", "Segoe UI", system-ui, sans-serif;
-    background: var(--bg); color: var(--text); line-height: 1.6;
-    -webkit-font-smoothing: antialiased; overflow-x: hidden;
-  }
-  .scan { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
-    background-image:
-      linear-gradient(rgba(34,211,238,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(34,211,238,0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-  .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
-  .logo { font-family: var(--mono); font-size: 15px; color: var(--cyan); letter-spacing: 1px; }
-  .logo b { color: var(--text); }
-  .nav-links { display: flex; gap: 26px; font-family: var(--mono); font-size: 12px; }
-  .nav-links a { color: var(--muted); text-decoration: none; transition: .2s; }
-  .nav-links a:hover { color: var(--cyan); }
-  .hero { padding: 110px 0 80px; }
-  .tag { font-family: var(--mono); font-size: 12px; color: var(--mag); border: 1px solid rgba(255,45,149,0.4); padding: 6px 14px; border-radius: 4px; display: inline-block; margin-bottom: 26px; }
-  h1 { font-size: 50px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; margin-bottom: 22px; }
-  h1 .hl { color: var(--cyan); text-shadow: 0 0 24px rgba(34,211,238,0.5); }
-  .sub { font-size: 16px; color: var(--muted); max-width: 600px; margin-bottom: 34px; }
-  .cta { display: inline-flex; gap: 16px; }
-  .btn { font-family: var(--mono); font-size: 13px; padding: 12px 24px; border-radius: 6px; text-decoration: none; transition: .2s; }
-  .btn-primary { border: 1px solid var(--cyan); color: var(--cyan); box-shadow: 0 0 18px rgba(34,211,238,0.25); }
-  .btn-primary:hover { background: rgba(34,211,238,0.08); }
-  .btn-ghost { border: 1px solid rgba(255,255,255,0.15); color: var(--text); }
-  .cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; padding: 30px 0 70px; }
-  .card { background: var(--panel); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 26px; transition: .25s; position: relative; overflow: hidden; }
-  .card::before { content:""; position:absolute; top:0; left:0; width: 100%; height: 2px; background: linear-gradient(90deg,var(--cyan),var(--mag)); opacity: .7; }
-  .card:hover { border-color: var(--cyan); box-shadow: 0 0 22px rgba(34,211,238,0.12); transform: translateY(-3px); }
-  .card .id { font-family: var(--mono); font-size: 11px; color: var(--mag); margin-bottom: 14px; }
-  .card h3 { font-size: 17px; font-weight: 500; margin-bottom: 8px; }
-  .card p { font-size: 13px; color: var(--muted); }
-  .meta { border-top: 1px solid rgba(255,255,255,0.1); padding: 40px 0 50px; display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; font-size: 13px; }
-  .meta .k { font-family: var(--mono); font-size: 11px; color: var(--cyan); margin-bottom: 6px; }
-  .meta .v { color: var(--text); }
-  footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 24px 0; font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: center; }
-  @media(max-width:720px){ h1{font-size:34px} .cards{grid-template-columns:1fr} .meta{grid-template-columns:1fr} .nav-links{display:none} }
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#050507;--panel:#0c0c12;--panel2:#111118;
+--cyan:#22d3ee;--mag:#ff2d95;--purple:#a78bfa;--green:#34d399;
+--text:#e6e6ee;--muted:#8b8ba0;--muted2:#5a5a6e;
+--mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+body{font-family:-apple-system,"PingFang SC","Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* 背景网格 */
+.bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;
+background-image:linear-gradient(rgba(34,211,238,.03)1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.03)1px,transparent 1px);background-size:48px 48px}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 28px}
+
+/* 导航 */
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{font-family:var(--mono);font-size:15px;color:var(--cyan);letter-spacing:2px;font-weight:600}
+.logo b{color:var(--text)}
+.nav-links{display:flex;gap:32px;font-family:var(--mono);font-size:12px}
+.nav-links a{color:var(--muted);text-decoration:none;transition:.25s;text-transform:uppercase}
+.nav-links a:hover{color:var(--cyan)}
+
+/* Hero */
+.hero{padding:100px 0 80px}
+.tag-row{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:11px;color:var(--cyan);border:1px solid rgba(34,211,238,.35);padding:5px 14px;border-radius:4px;display:inline-block}
+.tag.hot{color:var(--mag);border-color:rgba(255,45,149,.4)}
+h1{font-size:52px;font-weight:600;line-height:1.12;letter-spacing:-1.5px;margin-bottom:24px}
+h1 .hl{color:var(--cyan);text-shadow:0 0 30px rgba(34,211,238,.45)}
+h1 .hl2{color:var(--mag)}
+.hero-sub{font-size:17px;color:var(--muted);max-width:650px;margin-bottom:36px;line-height:1.8}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:13px;padding:13px 28px;border-radius:8px;text-decoration:none;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn-pri{background:rgba(34,211,238,.12);border:1px solid var(--cyan);color:var(--cyan);box-shadow:0 0 24px rgba(34,211,238,.18)}
+.btn-pri:hover{background:rgba(34,211,238,.22);box-shadow:0 0 36px rgba(34,211,238,.3)}
+.btn-ghost{border:1px solid rgba(255,255,255,.12);color:var(--text)}
+.btn-ghost:hover:border-color:rgba(255,255,255,.25)}
+
+/* Section 通用 */
+section{padding:70px 0}
+.section-label{font-family:var(--mono);font-size:11px;color:var(--muted2);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px}
+.section-title{font-size:32px;font-weight:600;margin-bottom:16px;letter-spacing:-.5px}
+.section-desc{font-size:15px;color:var(--muted);max-width:700px;margin-bottom:44px;line-height:1.8}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.2;margin:0 auto;width:60%}
+
+/* 关于我们 */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-text p{font-size:15px;color:var(--muted);margin-bottom:18px;line-height:1.9}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat-box{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:22px;text-align:center}
+.stat-num{font-size:32px;font-weight:700;color:var(--cyan);font-family:var(--mono)}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* 服务 */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.svc-card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:32px 28px;transition:.3s;position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--mag));opacity:.65}
+.svc-card:hover{border-color:rgba(34,211,238,.3);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3),0 0 20px rgba(34,211,238,.08)}
+.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px;font-family:var(--mono);font-weight:700;font-size:14px}
+.svc-icon.c1{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.2)}
+.svc-icon.c2{background:rgba(255,45,149,.1);color:var(--mag);border:1px solid rgba(255,45,149,.2)}
+.svc-icon.c3{background:rgba(167,139,250,.1);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+.svc-icon.c4{background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.2)}
+.svc-card h3{font-size:19px;font-weight:600;margin-bottom:10px}
+.svc-card .svc-desc{font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.75}
+.svc-list{list-style:none}
+.svc-list li{font-size:13px;color:var(--muted2);padding:5px 0;padding-left:16px;border-left:2px solid rgba(34,211,238,.25)}
+
+/* 技术栈 */
+.tech-bar{display:flex;flex-wrap:wrap;gap:10px}
+.tech-chip{font-family:var(--mono);font-size:11px;padding:7px 16px;border-radius:20px;border:1px solid rgba(255,255,255,.1);color:var(--muted);transition:.2s}
+.tech-chip:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* 项目案例 */
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.case-card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:26px 22px;transition:.25s}
+.case-card:hover{border-color:rgba(34,211,238,.25)}
+.case-tag{font-family:var(--mono);font-size:10px;color:var(--cyan);border:1px solid rgba(34,211,238,.3);padding:3px 10px;border-radius:3px;display:inline-block;margin-bottom:12px}
+.case-card h4{font-size:16px;font-weight:600;margin-bottom:8px}
+.case-card p{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* 为什么选择我们 */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-item{text-align:center;padding:24px 16px}
+.why-num{font-family:var(--mono);font-size:36px;font-weight:700;color:var(--cyan);opacity:.3;margin-bottom:8px}
+.why-item h4{font-size:15px;font-weight:600;margin-bottom:6px}
+.why-item p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* 联系 */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.contact-info{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:36px}
+.contact-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.contact-item:last-child{border:none}
+.contact-icon{width:38px;height:38px;border-radius:8px;background:rgba(34,211,238,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--cyan);font-family:var(--mono);font-size:12px}
+.contact-label{font-size:11px;color:var(--muted2);font-family:var(--mono);margin-bottom:2px}
+.contact-val{font-size:14px}
+.contact-form{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:36px}
+.form-group{margin-bottom:18px}
+.form-group label{font-size:12px;color:var(--muted2);display:block;margin-bottom:6px;font-family:var(--mono)}
+.form-input{width:100%;padding:12px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:var(--text);font-size:14px;outline:none;transition:.2s}
+.form-input:focus{border-color:var(--cyan);box-shadow:0 0 16px rgba(34,211,238,.1)}
+textarea.form-input{min-height:100px;resize:vertical}
+.form-btn{width:100%;padding:14px;background:rgba(34,211,238,.12);border:1px solid var(--cyan);border-radius:8px;color:var(--cyan);font-family:var(--mono);font-size:13px;cursor:pointer;transition:.25s}
+.form-btn:hover{background:rgba(34,211,238,.22)}
+
+/* Footer */
+footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+.footer-brand h4{font-size:16px;font-weight:600;margin-bottom:10px}
+.footer-brand p{font-size:13px;color:var(--muted);line-height:1.7;max-width:300px}
+.footer-col h5{font-size:12px;color:var(--muted2);font-family:var(--mono);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.footer-col a{display:block;font-size:13px;color:var(--muted);text-decoration:none;padding:4px 0;transition:.2s}
+.footer-col a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted2);font-family:var(--mono)}
+.privacy-links a{color:var(--muted2);text-decoration:none;margin-left:20px}
+.privacy-links a:hover{color:var(--cyan)}
+
+@media(max-width:800px){
+h1{font-size:34px}.about-grid,.contact-grid{grid-template-columns:1fr}
+.services-grid{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr}
+.footer-grid{grid-template-columns:1fr}.nav-links{display:none}
+}
 </style>
 </head>
 <body>
-<div class="scan"></div>
+<div class="bg-grid"></div>
+
 <div class="wrap">
-  <nav>
-    <div class="logo">TANGEN<b>_TECH</b></div>
-    <div class="nav-links"><a href="#">/业务</a><a href="#">/关于</a><a href="#">/联系</a></div>
-  </nav>
-  <section class="hero">
-    <div class="tag">&lt;/&gt; AI-NATIVE STUDIO</div>
-    <h1>构建会<span class="hl">思考</span>的<br>企业系统</h1>
-    <p class="sub">宜昌唐恩科技咨询有限公司 — 以软件工程与多智能体架构，为企业交付可运行的智能。</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="mailto:lijiankang@tangenzx.cn">./查看业务</a>
-      <a class="btn btn-ghost" href="mailto:lijiankang@tangenzx.cn">./联系</a>
-    </div>
-  </section>
-  <section class="cards">
-    <div class="card"><div class="id">[01] SOFTWARE</div><h3>企业软件开发</h3><p>店铺运营管理软件等标准化产品，从需求到交付的一站式工程能力。</p></div>
-    <div class="card"><div class="id">[02] AGENT</div><h3>AI 智能体</h3><p>CEO 咨询 Agent、自动化资讯爬虫与多智能体协作体系。</p></div>
-    <div class="card"><div class="id">[03] MEDIA</div><h3>影视内容创作</h3><p>影视创作军团与 AI 短剧生产管线，规模化产出视听内容。</p></div>
-    <div class="card"><div class="id">[04] CONSULT</div><h3>数字化咨询</h3><p>技术选型、流程自动化与 AI 落地战略咨询。</p></div>
-  </section>
-  <section class="meta">
-    <div><div class="k">ENTITY</div><div class="v">宜昌唐恩科技咨询有限公司</div></div>
-    <div><div class="k">EMAIL</div><div class="v">lijiankang@tangenzx.cn</div></div>
-    <div><div class="k">USCI</div><div class="v">91420500MA7H03JPM5P</div></div>
-    <div><div class="k">ADDRESS</div><div class="v">中国（湖北）自贸区宜昌片区大连路33号清华科技园2栋1303室</div></div>
-    <div><div class="k">PHONE</div><div class="v">+86 138 7260 9996</div></div>
-    <div><div class="k">EN_NAME</div><div class="v">Yichang Tang En Technology Consulting Co., Ltd.</div></div>
-  </section>
-  <footer>&copy; 2026 TANGEN_TECH &middot; Yichang Tang En Technology Consulting Co., Ltd.</footer>
+
+<!-- ===== 导航 ===== -->
+<nav>
+<div class="logo">TANGEN<b>_TECH</b></div>
+<div class="nav-links"><a href="#services">Services</a><a href="#about">About</a><a href="#cases">Cases</a><a href="#contact">Contact</a></div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+<div class="tag-row">
+<span class="tag hot">&lt;/&gt; AI-NATIVE STUDIO</span>
+<span class="tag">EST. 2025</span>
+<span class="tag">YICHANG · CHINA</span>
 </div>
+<h1>构建会<span class="hl">思考</span>的<br><span class="hl2">企业级系统</span></h1>
+<p class="hero-sub">宜昌唐恩科技咨询有限公司（Yichang Tang En Technology Consulting Co., Ltd.）是一家以 AI 原生技术为核心驱动的创新型科技咨询企业。我们将多智能体架构、自动化工程与软件产品化能力深度整合，为企业客户提供从战略咨询到系统交付的全链路技术服务。</p>
+<div class="btn-row">
+<a class="btn btn-pri" href="#services">查看服务 →</a>
+<a class="btn btn-ghost" href="#contact">联系我们</a>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== 关于我们 ===== -->
+<section id="about">
+<div class="section-label">// About Company</div>
+<h2 class="section-title">关于唐恩科技</h2>
+<div class="about-grid">
+<div class="about-text">
+<p>宜昌唐恩科技咨询有限公司成立于 2025 年，总部位于中国湖北省宜昌市——中国（湖北）自由贸易试验区宜昌片区大连路 33 号清华科技园。公司依托自贸区政策优势与清华大学科技园创新资源生态，专注于将前沿人工智能技术与传统企业需求深度融合。</p>
+<p>我们的核心团队拥有多年企业软件研发与 IT 咨询经验，在零售运营管理、AI 智能体开发、数字媒体内容生产等领域积累了丰富的项目实践。不同于传统的软件外包模式，我们采用「AI-Native」原生开发范式——从架构设计阶段就将大语言模型、多 Agent 协作、自动化数据管线作为系统的核心组件。</p>
+<p>公司已建立完善的软件工程管理体系，覆盖需求分析、架构设计、编码实现、测试验证、部署运维全生命周期。目前核心产品线包括：店铺运营管理系统（已交付客户现场运行）、影视创作军团多 Agent 协作体系、AI 自动化资讯聚合平台等。</p>
+<div class="about-stats">
+<div class="stat-box"><div class="stat-num">4+</div><div class="stat-lbl">业务方向</div></div>
+<div class="stat-box"><div class="stat-num">18</div><div class="stat-lbl">Agent 智能体</div></div>
+<div class="stat-box"><div class="stat-num">365</div><div class="stat-lbl">日运行天数</div></div>
+<div class="stat-box"><div class="stat-num">v1.0+</div><div class="stat-lbl">交付版本</div></div>
+</div>
+</div>
+<div style="background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:32px">
+<div style="font-family:var(--mono);font-size:12px;color:var(--cyan);margin-bottom:20px;text-transform:uppercase;letter-spacing:2px">◆ 企业信息 Enterprise Info</div>
+<table style="width:100%;font-size:14px">
+<tr style="border-bottom:1px solid rgba(255,255,255,.05)"><td style="padding:10px 0;color:var(--muted2);width:120px;font-family:var(--mono);font-size:11px">FULL_NAME</td><td style="padding:10px 0">宜昌唐恩科技咨询有限公司</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.05)"><td style="padding:10px 0;color:var(--muted2);font-family:var(--mono);font-size:11px">EN_NAME</td><td style="padding:10px 0">Yichang Tang En Technology Consulting Co., Ltd.</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.05)"><td style="padding:10px 0;color:var(--muted2);font-family:var(--mono);font-size:11px">USCI_CODE</td><td style="padding:10px 0;font-family:var(--mono)">91420500MA7H03JPM5P</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.05)"><td style="padding:10px 0;color:var(--muted2);font-family:var(--mono);font-size:11px">ADDRESS</td><td style="padding:10px 0;color:var(--muted)">中国（湖北）自贸区宜昌片区<br>大连路33号清华科技园2栋1303室</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,.05)"><td style="padding:10px 0;color:var(--muted2);font-family:var(--mono);font-size:11px">EMAIL</td><td style="padding:10px 0"><a href="mailto:lijiankang@tangenzx.cn" style="color:var(--cyan);text-decoration:none">lijiankang@tangenzx.cn</a></td></tr>
+<tr><td style="padding:10px 0;color:var(--muted2);font-family:var(--mono);font-size:11px">PHONE</td><td style="padding:10px 0;font-family:var(--mono)">+86 138 7260 9996</td></tr>
+</table>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== 核心服务 ===== -->
+<section id="services">
+<div class="section-label">// Core Services</div>
+<h2 class="section-title">核心业务领域</h2>
+<p class="section-desc">我们围绕「软件工程 + AI 智能 + 数字内容 + 战略咨询」四条主线，为客户提供端到端的技术服务能力。</p>
+<div class="services-grid">
+
+<div class="svc-card">
+<div class="svc-icon c1">01</div>
+<h3>企业软件开发</h3>
+<p class="svc-desc">面向中小企业的标准化软件产品与定制化开发服务，涵盖桌面端、移动端及 Web 应用。</p>
+<ul class="svc-list">
+<li>店铺运营管理软件 v1.0.96（已交付客户现场运行）</li>
+<li>通用版店铺管理平台 v0.4.0（下一代底盘产品）</li>
+<li>iOS / Android 双平台移动应用开发</li>
+<li>企业内部管理信息系统定制</li>
+<li>SaaS 产品架构设计与实施</li>
+</ul>
+</div>
+
+<div class="svc-card">
+<div class="svc-icon c2">02</div>
+<h3>AI 智能体系统</h3>
+<p class="svc-desc">基于大语言模型的多智能体协作体系，实现业务流程的自动化与智能化升级。</p>
+<ul class="svc-list">
+<li>CEO 咨询 Agent（YAML 定义驱动，待上线）</li>
+<li>18 Agent 影视创作军团协作体系</li>
+<li>AI 短剧自动生成生产线</li>
+<li>每日自动化资讯爬虫与聚合引擎</li>
+<li>多智能体任务编排与调度框架</li>
+</ul>
+</div>
+
+<div class="svc-card">
+<div class="svc-icon c3">03</div>
+<h3>数字内容创作</h3>
+<p class="svc-desc">融合 AI 技术的规模化视听内容生产能力，覆盖策划、制作到分发的完整链路。</p>
+<ul class="svc-list">
+<li>AI 辅助剧本创作与脚本优化</li>
+<li>短视频批量生产与后期处理流水线</li>
+<li>AIGC 图像与视觉素材生成</li>
+<li>跨平台内容分发与运营策略</li>
+</ul>
+</div>
+
+<div class="svc-card">
+<div class="svc-icon c4">04</div>
+<h3>数字化战略咨询</h3>
+<p class="svc-desc">帮助企业制定技术路线图，评估 AI 落地可行性，规划数字化转型路径。</p>
+<ul class="svc-list">
+<li>技术选型与架构评审咨询</li>
+<li>AI 能力评估与落地路径规划</li>
+<li>业务流程自动化诊断与方案设计</li>
+<li>IT 团队建设与技术培训</li>
+</ul>
+</div>
+
+</div>
+
+<!-- 技术栈 -->
+<div style="margin-top:50px">
+<div style="font-family:var(--mono);font-size:11px;color:var(--muted2);margin-bottom:16px;letter-spacing:1px">// TECH STACK</div>
+<div class="tech-bar">
+<span class="tech-chip">Python</span>
+<span class="tech-chip">Node.js</span>
+<span class="tech-chip">Swift / iOS</span>
+<span class="tech-chip">React / Vue</span>
+<span class="tech-chip">LLM / GPT / Claude</span>
+<span class="tech-chip">Multi-Agent</span>
+<span class="tech-chip">Git / CI/CD</span>
+<span class="tech-chip">Docker</span>
+<span class="tech-chip">MySQL / PostgreSQL</span>
+<span class="tech-chip">腾讯云 CloudBase</span>
+<span class="tech-chip">GitHub Actions</span>
+<span class="tech-chip">AIGC Pipeline</span>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== 项目案例 ===== -->
+<section id="cases">
+<div class="section-label">// Case Studies</div>
+<h2 class="section-title">项目与实践</h2>
+<p class="section-desc">以下为部分已完成或正在推进中的代表性项目。</p>
+<div class="case-grid">
+<div class="case-card">
+<span class="case-tag">PRODUCT</span>
+<h4>店铺运营管理系统</h4>
+<p>面向实体零售店的综合运营管理工具，支持库存管理、销售统计、会员管理等核心功能。v1.0.96 已在客户现场稳定运行。</p>
+</div>
+<div class="case-card">
+<span class="case-tag">AI SYSTEM</span>
+<h4>影视创作军团 18-Agent</h4>
+<p>基于多智能体协作的影视内容生产体系，覆盖选题、编剧、分镜、剪辑、特效等全链路环节的 AI 辅助工作流。</p>
+</div>
+<div class="case-card">
+<span class="case-tag">AUTOMATION</span>
+<h4>AI 资讯聚合引擎</h4>
+<p>全自动化的行业资讯采集、清洗、分析与推送系统，每日定时运行，实现 7×24 小时无间断信息监测。</p>
+</div>
+<div class="case-card">
+<span class="case-tag">IN DEVELOPMENT</span>
+<h4>通用版店铺 SaaS 平台</h4>
+<p>基于现有客户经验的下一代标准化产品底盘（v0.4.0），目标覆盖更广泛的中小微零售商户群体。</p>
+</div>
+<div class="case-card">
+<span class="case-tag">AGENT</span>
+<h4>CEO 咨询智能体</h4>
+<p>面向企业管理者的决策辅助 Agent 系统，通过 YAML 配置驱动，提供商业分析、市场情报、战略建议等能力。</p>
+</div>
+<div class="case-card">
+<span class="case-tag">MEDIA</span>
+<h4>AI 短剧生产线</h4>
+<p>结合 AIGC 技术的短视频/短剧批量生产管线，从脚本到成片的高度自动化工作流程。</p>
+</div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== 为什么选择我们 ===== -->
+<section>
+<div class="section-label">// Why Tangen Tech</div>
+<h2 class="section-title">为什么选择我们</h2>
+<div class="why-grid">
+<div class="why-item"><div class="why-num">01</div><h4>AI 原生架构</h4><p>不是简单套用 API，而是从底层将 LLM 和 Agent 能力融入系统设计</p></div>
+<div class="why-item"><div class="why-num">02</div><h4>实战验证</h4><p>产品已在真实客户环境运行，不是 PPT 方案</p></div>
+<div class="why-item"><div class="why-num">03</div><h4>快速迭代</h4><p>敏捷开发模式，小步快跑，持续交付可用版本</p></div>
+<div class="why-item"><div class="why-num">04</div><h4>全链路闭环</h4><p>从咨询到开发到部署到维护，一站式服务</p></div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== 联系方式 ===== -->
+<section id="contact">
+<div class="section-label">// Contact Us</div>
+<h2 class="section-title">联系我们</h2>
+<p class="section-desc">如果您有软件开发、AI 系统或数字化转型的相关需求，欢迎通过以下方式与我们取得联系。</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item"><div class="contact-icon">@</div><div><div class="contact-label">EMAIL / 电子邮箱</div><div class="contact-val"><a href="mailto:lijiankang@tangenzx.cn" style="color:var(--cyan);text-decoration:none">lijiankang@tangenzx.cn</a></div></div></div>
+<div class="contact-item"><div class="contact-icon">☎</div><div><div class="contact-label">PHONE / 联系电话</div><div class="contact-val" style="font-family:var(--mono)">+86 138 7260 9996</div></div></div>
+<div class="contact-item"><div class="contact-icon">◎</div><div><div class="contact-label">ADDR / 公司地址</div><div class="contact-val" style="color:var(--muted)">中国（湖北）自贸区宜昌片区<br>大连路33号清华科技园2栋1303室</div></div></div>
+<div class="contact-item"><div class="contact-icon">W</div><div><div class="contact-label">WEB / 官方网站</div><div class="contact-val"><a href="https://tangenkeji.com" style="color:var(--cyan);text-decoration:none">https://tangenkeji.com</a></div></div></div>
+</div>
+<div class="contact-form">
+<form action="mailto:lijiankang@tangenzx.cn" method="post" enctype="text/plain">
+<div class="form-group"><label>Your Name / 姓名</label><input type="text" class="form-input" placeholder="请输入您的姓名"></div>
+<div class="form-group"><label>Email Address / 邮箱</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+<div class="form-group"><label>Message / 留言内容</label><textarea class="form-input" placeholder="请描述您的需求..."></textarea></div>
+<button type="submit" class="form-btn">发送消息 →</button>
+</form>
+</div>
+</div>
+</section>
+
+</div><!-- end wrap -->
+
+<!-- ===== 页脚 ===== -->
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-brand">
+<h4>TANGEN_TECH</h4>
+<p>宜昌唐恩科技咨询有限公司 — 以 AI 原生技术驱动企业数字化转型。让每一个系统都会思考。</p>
+</div>
+<div class="footer-col">
+<h5>Services</h5>
+<a href="#services">企业软件开发</a>
+<a href="#services">AI 智能体系统</a>
+<a href="#services">数字内容创作</a>
+<a href="#services">战略咨询</a>
+</div>
+<div class="footer-col">
+<h5>Company</h5>
+<a href="#about">关于我们</a>
+<a href="#cases">项目案例</a>
+<a href="#">加入团队</a>
+<a href="#contact">联系方式</a>
+</div>
+<div class="footer-col">
+<h5>Contact</h5>
+<a href="mailto:lijiankang@tangenzx.cn">lijiankang@tangenzx.cn</a>
+<a href="tel:+8613872609996">+86 138 7260 9996</a>
+<a href="https://tangenkeji.com">tangenkeji.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>&copy; 2026 Yichang Tang En Technology Consulting Co., Ltd. All rights reserved.</span>
+<span class="privacy-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></span>
+</div>
+</div>
+</footer>
+
 </body>
 </html>
